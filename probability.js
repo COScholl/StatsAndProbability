@@ -30,13 +30,11 @@ const forFact = (num) => {
  * ⎜ ⎟ =  ――――――――――
  * ⎝k⎠    k!(n - k)!
  * "n choose k":
- * n = total number of trials
- * k = target number for success
  * "Out of 3 (n) tosses, what are the chances of 2 (k) heads?"
  * This does not allow for repetitions
- * @param  {[type]} n [description]
- * @param  {[type]} k [description]
- * @return {[type]}   [description]
+ * @param  {number} n total number of trials/options
+ * @param  {number} k target number for success/ chosen outcome
+ * @return {number}   chances of k success out of n trials
  */
 const binomialCoefficient = (n, k) => {
   let numerator = forFact(n);
@@ -50,9 +48,12 @@ const binomialCoefficient = (n, k) => {
  * ⎜⎜ ⎟⎟ = ⎜           ⎟
  * ⎝⎝k⎠⎠   ⎝     k     ⎠
  * "n multichoose k":
- * @param  {[type]} n [description]
- * @param  {[type]} k [description]
- * @return {[type]}   [description]
+ * "Out of 9 (n) flavors of icecream, how many combinations are there with
+ * 3 (k) scoops, allowing for multiple scoops of each flavor?"
+ * This allows for repetition
+ * @param  {number} n total number of trials/options
+ * @param  {number} k target number for success/chosen outcome
+ * @return {number}   chances of k choices out of n options
  */
 const multisetCoefficient = (n, k) => {
 
