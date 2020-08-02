@@ -127,9 +127,9 @@ const binomialCoefficient = (n, k) => {
 };
 
 /**
- *  k  n + 1 - i
- * 	Π ――――――――――
- * i=1    i
+ *  k    n + 1 - i
+ *  Π   ――――――――――
+ * i=1      i
  * "n choose k":
  * binomial coefficent is the number of ways to choose unique k elements from a fixed
  * set of n elements
