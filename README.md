@@ -12,10 +12,7 @@ need for these functions, I have researched and written them. There will be more
 the future, I am sure.
 
 #### Why JavaScript?
-This collection of functions in JavaScript is for personal projects that use JavaScript,
-as I am continuing my self-education of programming and web design. When I take
-up other languages again, I may re-create these functions, if there is need for efficiency
-that JavaScript is not providing me.
+This collection of functions in JavaScript is for personal projects that use JavaScript.
 
 This collection uses BigNumber.js (https://github.com/MikeMcl/bignumber.js/) to improve
 the accuracy of math on floats, since probabilities are normalized to float numbers
