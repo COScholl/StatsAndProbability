@@ -71,7 +71,8 @@ const range = (start, stop, step = 1) => {
 */
 
 /**
- * Let X be a random variable with finite number of finite outcomes x₁,x₂,...,xₖ
+ * Let X be a random variable with a probability function defined by a
+ * finite number of finite outcomes x₁,x₂,...,xₖ
  * each with its respective probability p₁,p₂,...,pₖ
  * e.g.
  *        x |  0  |  1  |  2  |  3  |
