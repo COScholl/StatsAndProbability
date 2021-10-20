@@ -76,7 +76,7 @@ const range = (start, stop, step = 1) => {
  * each with its respective probability p₁,p₂,...,pₖ
  * e.g.
  *        x |  0  |  1  |  2  |  3  |
- * P(X = x) | 0.1 |	0.2 |	0.4 |	0.3 | 
+ * P(X = x) | 0.1 |0.2 |0.4 |0.3 | 
  * Expectation of X (E[X]) or mean of random variable x (μₓ) is:
  *         k
  * E[X] =  ∑ xᵢpᵢ = x₁p₁ + x₂p₂ + ... + xₖpₖ
