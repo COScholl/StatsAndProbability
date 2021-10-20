@@ -73,10 +73,16 @@ const range = (start, stop, step = 1) => {
 /**
  * Let X be a random variable with finite number of finite outcomes x₁,x₂,...,xₖ
  * each with its respective probability p₁,p₂,...,pₖ
+ * e.g.
+ *        x |  0  |  1  |  2  |  3  |
+ * P(X = x) | 0.1 |	0.2 |	0.4 |	0.3 | 
  * Expectation of X (E[X]) or mean of random variable x (μₓ) is:
  *         k
  * E[X] =  ∑ xᵢpᵢ = x₁p₁ + x₂p₂ + ... + xₖpₖ
  *        i=1
+ * e.g.
+ * E[X] = 0 * 0.1 + 1 * 0.2 + 2 * 0.4 + 3 * 0.3
+ *      = 1.9
  * Determine expected value of random outcome for a given probability space
  * {'x₁': p₁, 'x₂': p₂, ..., 'xₖ': pₖ}
  * @param  {Object} pSpace probability space for all potential outcomes
