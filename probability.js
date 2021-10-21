@@ -182,7 +182,7 @@ const multisetCoefficient = (n, k) => {
  * @param  {number} p probability for k
  * @return {number}   probability of successes for k in n trials
  */
-const binomialDistMassFunc = (n, k, p) => {
+const binomialDistProbabilityMassFunc = (n, k, p) => {
   // number of outcomes for k successes in n trials
   let coeff = binomialCoefficient(n, k);
   // q is probability of failure, complement of p
@@ -205,7 +205,7 @@ const binomialDistMassFunc = (n, k, p) => {
 const binomialDistCumulativeDistFunc = (n, k, p) => {
   let retVal = 0;
   for (let i = 0; i <= k; i++) {
-    retVal += binomialDistMassFunc(n, i, p);
+    retVal += binomialDistProbabilityMassFunc(n, i, p);
   }
 
   return retVal;
