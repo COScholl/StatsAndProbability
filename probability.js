@@ -202,7 +202,7 @@ const binomialDistMassFunc = (n, k, p) => {
  * @param  {number} k successes
  * @param  {number} p probability for k
  */
-const binomialDistCDF = (n, k, p) => {
+const binomialDistCumulativeDistFunc = (n, k, p) => {
   let retVal = 0;
   for (let i = 0; i <= k; i++) {
     retVal += binomialDistMassFunc(n, i, p);
