@@ -258,6 +258,17 @@ const probabilitySpace = (n, s) => {
 /* Parsing data sets that are arrays of numbers */
 
 /**
+ * Instead of average of all numbers in array for sample variance and sample standard deviation,
+ * Bessel's correction is the use of n − 1 instead of n to replace the mean in sample variance
+ * and sample standard deviation
+ */
+const correctedMean = (data = []) => {
+  const sum = data.reduce((accum, currVal) => BigNumber(accum).plus(currVal), 0);
+
+  return sum.dividedBy(data.length - 1).toNumber();
+};
+
+/**
  * Average of all numbers in data array
  * @param  {Array}  [data=[]] integer or float data points
  * @return {number}           average number
@@ -335,6 +346,20 @@ const squareDiff = (data = [], avg) => {
   const sqrDiff = diff.map((currVal) => currVal.multipliedBy(currVal).toNumber());
 
   return sqrDiff;
+};
+
+/**
+ * Measure of amount of variation of a set of values when the full population is
+ * not known (sample of the population)
+ * @param  {Array}  [data=[]] integer or float data points
+ * @return {number}           number that represents spread of values from mean
+ */
+const sampleStandardDeviation = (data = []) => {
+  let sqrDiffs = squareDiff(data, mean(data));
+  let correctedAvgSqrDiffs = correctedMean(sqrDiffs);
+  let stdDev = BigNumber(correctedAvgSqrDiffs).squareRoot().toNumber();
+
+  return stdDev;
 };
 
 /**
