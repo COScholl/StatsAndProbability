@@ -375,6 +375,8 @@ const standardDeviation = (data = []) => {
   return stdDev;
 };
 
+/* @TODO: add tScore function and make notes for sample standard deviation and Bessel's correction (degrees of freedom) for sample mean */
+
 /**
  * The number of standard deviations a value is above or below the mean
  * @param  {number} val    any integer or float number data point of a data set
